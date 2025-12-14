@@ -1,6 +1,9 @@
 import FormHubungiKami from "./FormHubungiKami";
+import hubungiKamiData from "../data/hubungi-kami.json";
 
 export default function HubungiKami() {
+  const { location, telephone, email, pinpoint } = hubungiKamiData;
+
   return (
     <section
       id="hubungi-kami"
@@ -35,11 +38,7 @@ export default function HubungiKami() {
                   <h3 className="font-urbanist font-bold text-lg mb-2 text-[#004740]">
                     Kantor Kami
                   </h3>
-                  <p className="font-inter text-gray-700">
-                    Satrio Tower, Lt. 16, Jl. Prof. Dr. Satrio Kav. 1-4,
-                    <br />
-                    Kuningan, Jakarta Selatan, 12950
-                  </p>
+                  <p className="font-inter text-gray-700 w-3/4">{location}</p>
                 </div>
               </div>
 
@@ -54,9 +53,12 @@ export default function HubungiKami() {
                     Telepon
                   </h3>
                   <p className="font-inter text-gray-700">
-                    +62 21 5555 6789
-                    <br />
-                    +62 812 3456 7890 (WhatsApp)
+                    {telephone.map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -72,9 +74,12 @@ export default function HubungiKami() {
                     Email
                   </h3>
                   <p className="font-inter text-gray-700">
-                    hello@anikanusantara.com
-                    <br />
-                    support@anikanusantara.com
+                    {email.map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -83,12 +88,14 @@ export default function HubungiKami() {
             {/* FIXED MAP */}
             <div className="rounded-2xl overflow-hidden shadow-lg h-72 w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42275577.16058454!2d95.93751516203211!3d-2.2759975872736554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d82607fd9a2781f%3A0x301f8f1fc28ca40!2sIndonesia!5e0!3m2!1sen!2sid!4v1708570000"
-                className="border-0 w-full h-full"
-                loading="lazy"
+                src={pinpoint}
+                width="600"
+                height="450"
                 allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+                className="w-full h-full border-0"
+              />
             </div>
           </div>
 
