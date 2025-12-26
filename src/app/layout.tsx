@@ -22,7 +22,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Anika Nusantara Langowan",
+  title: "Kode Teknologi Kombinasi",
   description: "Solusi Pembayaran PPOB Terpercaya untuk Kebutuhan Nusantara",
   icons: {
     icon: "/assets/tab-icon.png",
