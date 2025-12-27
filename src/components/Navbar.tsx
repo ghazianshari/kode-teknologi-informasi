@@ -60,8 +60,8 @@ const Navbar = () => {
             {/* Logo */}
             <div className="shrink-0">
               <img
-                src="/assets/anl-main-logo.svg"
-                alt="ANL Logo"
+                src="/assets/ktk-main-logo.svg"
+                alt="KTK Logo"
                 className="h-11 w-auto cursor-pointer"
                 onClick={() => handleScrollTo("home")}
               />
@@ -73,14 +73,14 @@ const Navbar = () => {
                 <a
                   key={item.target}
                   onClick={() => handleScrollTo(item.target)}
-                  className="text-[#0E1D1B] cursor-pointer hover:text-[#004740] font-semibold text-base transition-colors duration-200"
+                  className="text-[#0E1D1B] cursor-pointer hover:text-[#0533F9] font-semibold text-base transition-colors duration-200"
                 >
                   {item.label}
                 </a>
               ))}
               <button
                 onClick={() => handleScrollTo("hubungi-kami")}
-                className="bg-[#D9F509] hover:bg-[#B3D900] cursor-pointer font-semibold rounded-lg px-6 py-2.5 transition-colors duration-200"
+                className="text-white bg-[#0533F9] hover:bg-[#0533F9]/70 cursor-pointer font-semibold rounded-lg px-6 py-2.5 transition-colors duration-200"
               >
                 Hubungi Kami
               </button>
@@ -129,8 +129,8 @@ const Navbar = () => {
               {/* Header row inside sheet */}
               <div className="flex items-center justify-between mb-6">
                 <img
-                  src="/assets/anl-main-logo.svg"
-                  alt="ANL Logo"
+                  src="/assets/ktk-main-logo.svg"
+                  alt="KTK Logo"
                   className="h-9"
                   onClick={() => handleScrollTo("home")}
                 />
@@ -164,7 +164,7 @@ const Navbar = () => {
                 <li className="pt-2">
                   <button
                     onClick={() => handleScrollTo("hubungi-kami")}
-                    className="w-full bg-[#D9F509] hover:bg-[#B3D900] px-6 py-3 rounded-lg transition-colors font-semibold"
+                    className="w-full text-white bg-[#0533F9] hover:bg-[#0533F9]/70 px-6 py-3 rounded-lg transition-colors font-semibold"
                   >
                     Hubungi Kami
                   </button>

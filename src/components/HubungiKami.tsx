@@ -7,22 +7,23 @@ export default function HubungiKami() {
   return (
     <section
       id="hubungi-kami"
-      className="sleek-zoom-90 py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20 bg-linear-to-br from-purple-100 via-pink-50 to-purple-200"
+      className="sleek-zoom-90 py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-20"
       style={{
         background:
-          "linear-gradient(135deg,rgba(217, 245, 9, 0) 0%, rgba(217, 245, 9, 0.35) 100%)",
+          "linear-gradient(170deg,rgba(255, 255, 255, 1) 31%, rgba(16, 192, 254, 0.5) 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* LEFT CONTENT */}
-          <div className="space-y-8">
+          <div className="space-y-8 w-full">
             <div>
-              <h2 className="font-urbanist font-bold text-2xl text-[#004740] mb-2.5">
+              <h2 className="font-urbanist font-bold text-2xl md:text-3xl text-[#1B227D] mb-2.5">
                 Hubungi Kami
               </h2>
-              <p className="font-urbanist font-extrabold text-[#0E1D1B] text-3xl leading-relaxed">
-                Siap Membantu Kebutuhan Bisnis Anda.
+              <p className="font-urbanist text-[#1B1C32] w-[90%] md:w-full text-sm md:text-base leading-relaxed">
+                Ada pertanyaan? Kami ingin sekali mendengarnya. Kirimkan pesan
+                kepada kami, dan kami akan segera merespons.
               </p>
             </div>
 
@@ -31,14 +32,16 @@ export default function HubungiKami() {
               {/* Kantor */}
               <div className="flex items-start gap-4">
                 <img
-                  src="/assets/hubungi-kami/location.svg"
+                  src="/assets/hubungi-kami/lokasi.svg"
                   className="w-12 h-12"
                 />
                 <div>
-                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#004740]">
+                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#1B227D]">
                     Kantor Kami
                   </h3>
-                  <p className="font-inter text-gray-700 w-3/4">{location}</p>
+                  <p className="font-inter text-sm md:text-base text-[#1B1C32] w-3/4">
+                    {location}
+                  </p>
                 </div>
               </div>
 
@@ -49,10 +52,10 @@ export default function HubungiKami() {
                   className="w-12 h-12"
                 />
                 <div>
-                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#004740]">
+                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#1B227D]">
                     Telepon
                   </h3>
-                  <p className="font-inter text-gray-700">
+                  <p className="font-inter text-sm md:text-base text-[#1B1C32]">
                     {telephone.map((line, index) => (
                       <span key={index}>
                         {line}
@@ -66,14 +69,14 @@ export default function HubungiKami() {
               {/* Email */}
               <div className="flex items-start gap-4">
                 <img
-                  src="/assets/hubungi-kami/mail.svg"
+                  src="/assets/hubungi-kami/email.svg"
                   className="w-12 h-12"
                 />
                 <div>
-                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#004740]">
+                  <h3 className="font-urbanist font-bold text-lg mb-2 text-[#1B227D]">
                     Email
                   </h3>
-                  <p className="font-inter text-gray-700">
+                  <p className="font-inter text-sm md:text-base text-[#1B1C32]">
                     {email.map((line, index) => (
                       <span key={index}>
                         {line}
@@ -86,11 +89,11 @@ export default function HubungiKami() {
             </div>
 
             {/* FIXED MAP */}
-            <div className="rounded-2xl overflow-hidden shadow-lg h-72 w-full">
+            <div className="rounded-2xl overflow-hidden shadow-lg h-72 md:w-full">
               <iframe
                 src={pinpoint}
-                width="600"
-                height="450"
+                width="100%"
+                height="100%"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -100,7 +103,9 @@ export default function HubungiKami() {
           </div>
 
           {/* FORM */}
-          <FormHubungiKami />
+          <div className="w-full overflow-hidden">
+             <FormHubungiKami />
+          </div>
         </div>
       </div>
     </section>

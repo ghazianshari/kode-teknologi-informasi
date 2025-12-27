@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import HubungiKami from "@/components/HubungiKami";
-import KeunggulanKami from "@/components/KeunggulanKami";
+import KualitasKami from "@/components/KualitasKami";
 import LayananPPOB from "@/components/LayananPPOB";
 import TentangKami from "@/components/TentangKami";
 
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <KeunggulanKami />
+      <KualitasKami />
       <TentangKami />
       <LayananPPOB />
       <HubungiKami />

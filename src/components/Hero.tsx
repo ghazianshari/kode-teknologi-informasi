@@ -8,31 +8,38 @@ const Hero = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col pt-4 pb-8 relative">
           <div className="space-y-6 text-center mb-8 relative z-10">
-            <h1 className="font-extrabold text-3xl leading-tight text-[#004740]">
+            <h1 className="font-extrabold text-3xl leading-tight text-[#1B227D]">
               Solusi Pembayaran
               <br />
-              PPOB Terpercaya untuk Kebutuhan Nusantara
+              <span className="text-[#0533F9]">PPOB Terintegrasi</span>
+              <br />
+              untuk Bisnis Anda
             </h1>
 
-            <p className="text-base text-gray-700 leading-relaxed px-2">
-              ANIKA NUSANTARA LANGOWAN hadir sebagai Biller Aggregator PPOB yang
-              menghubungkan berbagai layanan pembayaran dalam satu sistem
-              terintegrasi. Dengan teknologi yang stabil, aman, dan mudah
-              digunakan, kami membantu mitra bisnis dan masyarakat menjalankan
-              transaksi pembayaran secara cepat, akurat, dan efisien di seluruh
-              Indonesia.
+            <p className="text-sm text-gray-700 leading-relaxed px-2">
+              <span className="font-bold">KODE TEKNOLOGI KOMBINASI</span> hadir
+              sebagai Biller Aggregator PPOB yang menghubungkan berbagai layanan
+              pembayaran dalam satu sistem terintegrasi. Dengan teknologi yang
+              stabil, aman, dan mudah digunakan, kami membantu mitra bisnis dan
+              masyarakat menjalankan transaksi pembayaran secara cepat, akurat,
+              dan efisien di seluruh Indonesia.
             </p>
 
             <a href="#hubungi-kami">
-              <button className="bg-[#D9F509] hover:bg-[#B3D900] font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 w-full max-w-xs mx-auto block">
+              <button className="text-white mb-5 bg-[#0533F9] hover:bg-[#0533F9]/90 font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 w-[90%] mx-auto block">
                 Hubungi Kami
+              </button>
+            </a>
+            <a href="#layanan">
+              <button className="text-[#0533F9] bg-white border border-[#0533F9] font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 w-[90%] mx-auto block">
+                Lihat Layanan
               </button>
             </a>
           </div>
 
-          <div className="relative w-full -mt-56 mb-2 z-0">
+          <div className="relative w-full -mt-32 mb-2 z-0">
             <img
-              src="/assets/hero/cewe-1-mobile.svg"
+              src="/assets/hero/cewe-cewe-mobile.svg"
               alt="Business professionals discussing"
               className="w-full h-auto max-w-xl mx-auto"
             />
@@ -43,28 +50,30 @@ const Hero = () => {
         <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center h-full">
           {/* Left Content */}
           <div className="space-y-6 relative z-10">
-            <h1 className="font-extrabold text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#004740]">
+            <h1 className="font-extrabold text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#1B227D]">
               Solusi Pembayaran
               <br />
-              PPOB Terpercaya untuk Kebutuhan Nusantara
+              <span className="text-[#0533F9]">PPOB Terintegrasi</span>
+              <br />
+              untuk Bisnis Anda
             </h1>
 
             <p className="text-lg text-justify text-gray-700 leading-relaxed">
-              ANIKA NUSANTARA LANGOWAN hadir sebagai Biller Aggregator PPOB yang
-              menghubungkan berbagai layanan pembayaran dalam satu sistem
-              terintegrasi. Dengan teknologi yang stabil, aman, dan mudah
-              digunakan, kami membantu mitra bisnis dan masyarakat menjalankan
-              transaksi pembayaran secara cepat, akurat, dan efisien di seluruh
-              Indonesia.
+              <span className="font-bold">KODE TEKNOLOGI KOMBINASI</span> hadir
+              sebagai Biller Aggregator PPOB yang menghubungkan berbagai layanan
+              pembayaran dalam satu sistem terintegrasi. Dengan teknologi yang
+              stabil, aman, dan mudah digunakan, kami membantu mitra bisnis dan
+              masyarakat menjalankan transaksi pembayaran secara cepat, akurat,
+              dan efisien di seluruh Indonesia.
             </p>
             <div className="text-[#004740]">
               <a href="#hubungi-kami">
-                <button className="bg-[#D9F509] hover:bg-[#B3D900] cursor-pointer font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="text-white bg-[#0533F9] hover:bg-[#0533F9]/90 cursor-pointer font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
                   Hubungi Kami
                 </button>
               </a>
               <a href="#layanan" className="ml-4">
-                <button className="bg-transparent border-2 border-[#D9F509] cursor-pointer font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="bg-transparent border-2 text-[#0533F9] border-[#0533F9] cursor-pointer font-semibold rounded-lg px-8 py-3.5 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
                   Lihat Layanan
                 </button>
               </a>
@@ -79,7 +88,7 @@ const Hero = () => {
             data-aos-duration="1000"
           >
             <img
-              src="/assets/hero/cewe-1.svg"
+              src="/assets/hero/cewe-cewe.svg"
               alt="Business professionals discussing"
               className="w-full h-full object-cover"
             />

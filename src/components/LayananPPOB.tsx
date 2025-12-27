@@ -6,7 +6,7 @@ const LayananPPOB = () => {
 
   const layanan = [
     {
-      icon: "/assets/layanan/water-electric.svg",
+      icon: "/assets/layanan/listrik-air.svg",
       title: "Tagihan Listrik & Air",
       description:
         "Layanan pembayaran PLN pascabayar, token listrik, dan tagihan PDAM berbagai wilayah.",
@@ -18,7 +18,7 @@ const LayananPPOB = () => {
         "Pembayaran iuran BPJS Kesehatan dan Ketenagakerjaan yang praktis.",
     },
     {
-      icon: "/assets/layanan/internet.svg",
+      icon: "/assets/layanan/wifi.svg",
       title: "Internet & Telkom",
       description:
         "Bayar tagihan IndiHome, telepon rumah, dan penyedia internet lainnya.",
@@ -36,7 +36,7 @@ const LayananPPOB = () => {
         "Isi ulang pulsa dan paket data semua operator seluler dengan harga bersaing.",
     },
     {
-      icon: "/assets/layanan/game-voucher.svg",
+      icon: "/assets/layanan/voucher-game.svg",
       title: "Voucher Game",
       description:
         "Top up voucher game online dan layanan streaming hiburan digital.",
@@ -58,24 +58,23 @@ const LayananPPOB = () => {
     >
       {/* Background gradient - only bottom half */}
       <div
-        className="absolute inset-x-0 bottom-0 h-1/2 z-0"
+        className="absolute inset-x-0 bottom-0 h-full z-0"
         style={{
           background:
-            "linear-gradient(180deg,rgba(217, 245, 9, 0) 0%, rgba(217, 245, 9, 0.625) 85%, rgba(0, 127, 53, 0.5) 100%)",
+            "linear-gradient(170deg,rgba(16, 192, 254, 1) 0%, rgba(5, 51, 249, 1) 83%)",
         }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h3 className="text-[#004740] font-bold text-sm md:text-base mb-4 uppercase tracking-wider text-center">
-            LAYANAN KAMI
-          </h3>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Layanan PPOB untuk Kebutuhan
-            <br />
-            Bisnis Anda
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Layanan PPOB untuk Kebutuhan Bisnis Anda
           </h2>
+          <h3 className="text-white text-sm md:text-base mb-4 tracking-wider text-center">
+            Satu koneksi, ribuan produk digital. Buka aliran pendapatan baru
+            dengan katalog lengkap kami.
+          </h3>
         </div>
 
         {/* Desktop Grid */}
@@ -83,22 +82,19 @@ const LayananPPOB = () => {
           {layanan.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#D9F509]"
-              data-aos="fade-up"
-              data-aos-delay={`${index * 100}`}
-              data-aos-duration="300"
+              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center md:justify-start mb-6">
                 <img
                   src={item.icon}
                   alt={item.title}
                   className="w-24 h-24 object-contain"
                 />
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-[#004740] mb-4 text-center">
+              <h3 className="text-xl lg:text-2xl font-bold text-[#1B227D] mb-4 text-center md:text-left">
                 {item.title}
               </h3>
-              <p className="text-gray-700 text-center leading-relaxed text-sm lg:text-base">
+              <p className="text-[#1B1C32] text-center leading-relaxed text-sm lg:text-base md:text-left">
                 {item.description}
               </p>
             </div>
@@ -106,11 +102,7 @@ const LayananPPOB = () => {
         </div>
 
         {/* Mobile Carousel */}
-        <div
-          className="md:hidden relative"
-          data-aos="fade-up"
-          data-aos-duration="300"
-        >
+        <div className="md:hidden relative">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-out"
@@ -126,10 +118,10 @@ const LayananPPOB = () => {
                         className="w-24 h-24 object-contain"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-[#004740] mb-4 text-center">
+                    <h3 className="text-xl font-bold text-[#1B227D] mb-4 text-center">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-center leading-relaxed text-sm">
+                    <p className="text-[#1B1C32] text-center leading-relaxed text-sm">
                       {item.description}
                     </p>
                   </div>
@@ -146,8 +138,8 @@ const LayananPPOB = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "w-8 bg-[#007F35]"
-                    : "w-2 bg-[#007F35]/30 border-2 border-[#007F35]"
+                    ? "w-8 bg-white"
+                    : "w-2 bg-transparent border-2 border-white"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

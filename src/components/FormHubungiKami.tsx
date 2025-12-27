@@ -53,14 +53,14 @@ const FormHubungiKami = () => {
 
   return (
     <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl">
-      <p className="font-inter text-center text-gray-700 mb-6">
+      <p className="font-inter text-left font-semibold text-[#1B227D] mb-6">
         Isi formulir di bawah ini dan kami akan menghubungi Anda segera
       </p>
 
       <form onSubmit={formik.handleSubmit} className="space-y-6">
         {/* Nama Lengkap */}
         <div>
-          <label className="block font-urbanist font-semibold text-gray-800 mb-2">
+          <label className="block font-urbanist font-semibold text-[#1B1C32] mb-2">
             Nama Lengkap
           </label>
           <input
@@ -77,7 +77,7 @@ const FormHubungiKami = () => {
 
         {/* Email */}
         <div>
-          <label className="block font-urbanist font-semibold text-[#004740] mb-2">
+          <label className="block font-urbanist font-semibold text-[#1B1C32] mb-2">
             Email
           </label>
           <input
@@ -94,7 +94,7 @@ const FormHubungiKami = () => {
 
         {/* Phone */}
         <div>
-          <label className="block font-urbanist font-semibold text-[#004740] mb-2">
+          <label className="block font-urbanist font-semibold text-[#1B1C32] mb-2">
             No HP / WhatsApp
           </label>
           <input
@@ -111,7 +111,7 @@ const FormHubungiKami = () => {
 
         {/* Pesan */}
         <div>
-          <label className="block font-urbanist font-semibold text-[#004740] mb-2">
+          <label className="block font-urbanist font-semibold text-[#1B1C32] mb-2">
             Pesan / Pertanyaan
           </label>
           <textarea
@@ -128,16 +128,18 @@ const FormHubungiKami = () => {
 
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           {/* CAPTCHA */}
-          <ReCAPTCHA
-            ref={captchaRef}
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-            onChange={handleCaptcha}
-          />
+          <div className="origin-left scale-[0.8] sm:scale-100">
+            <ReCAPTCHA
+              ref={captchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+              onChange={handleCaptcha}
+            />
+          </div>
 
           {/* SUBMIT BUTTON */}
           <button
             type="submit"
-            className="bg-[#D9F509] hover:bg-[#B3D900] text-[#004740] font-urbanist font-bold text-lg py-3.5 px-8 rounded-md shadow-lg hover:shadow-xl transition-all"
+            className="bg-[#0533F9] hover:bg-[#0533F9]/90 text-white cursor-pointer font-urbanist font-bold text-lg py-3.5 px-8 rounded-md shadow-lg hover:shadow-xl transition-all"
           >
             Kirim Pesan
           </button>
